@@ -3,175 +3,259 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fast PDF to Word Converter</title>
-  <meta name="description" content="Convert PDF to Word quickly and accurately. Scanned PDFs, formatting preserved. Affordable and fast service." />
+  <title>DocSwift — PDF to Word Converter</title>
+  <meta name="description" content="DocSwift converts PDF to Word quickly and accurately. Scanned PDFs, formatting preserved. Affordable and fast service." />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', Arial, sans-serif;
       margin: 0;
-      background: #f7f9fc;
+      background: #f4f7fb;
       color: #333;
     }
     header {
-      background: #2563eb;
+      background: linear-gradient(135deg, #2563eb, #1e40af);
       color: white;
-      padding: 30px 20px;
+      padding: 40px 20px;
       text-align: center;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+    }
+    .logo {
+      width: 52px;
+      height: 52px;
+      background: white;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: #2563eb;
+      font-size: 1.4rem;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
     }
     header h1 {
       margin: 0;
-      font-size: 2.2rem;
+      font-size: 2.4rem;
+      font-weight: 600;
     }
     header p {
       margin-top: 10px;
-      font-size: 1.1rem;
+      font-size: 1.15rem;
+      opacity: 0.9;
     }
     .container {
       max-width: 1100px;
       margin: auto;
-      padding: 40px 20px;
+      padding: 50px 20px;
     }
     .hero {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
+      gap: 40px;
       align-items: center;
     }
     .hero-text h2 {
-      font-size: 2rem;
+      font-size: 2.1rem;
       margin-bottom: 15px;
     }
     .hero-text p {
       font-size: 1.1rem;
-      line-height: 1.6;
+      line-height: 1.7;
     }
     .hero-box {
       background: white;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      padding: 35px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     }
     .hero-box h3 {
       margin-top: 0;
+      font-weight: 600;
     }
     .hero-box input[type="file"] {
       width: 100%;
       margin: 15px 0;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
     }
     .hero-box button {
       width: 100%;
-      padding: 12px;
+      padding: 14px;
       background: #2563eb;
       color: white;
       border: none;
-      border-radius: 6px;
+      border-radius: 8px;
       font-size: 1rem;
       cursor: pointer;
+      font-weight: 500;
     }
     .hero-box button:hover {
       background: #1d4ed8;
     }
     .features {
-      margin-top: 60px;
+      margin-top: 70px;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
+      gap: 30px;
     }
     .feature-card {
       background: white;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.06);
       text-align: center;
     }
     .feature-card h4 {
-      margin-top: 10px;
+      margin-top: 12px;
+      font-weight: 600;
     }
     .pricing {
-      margin-top: 70px;
+      margin-top: 80px;
       text-align: center;
     }
     .pricing h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
+      font-size: 2.2rem;
+      margin-bottom: 25px;
     }
     .pricing-cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
+      gap: 30px;
     }
     .price-card {
       background: white;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      padding: 35px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      position: relative;
     }
     .price-card h3 {
       margin-top: 0;
+      font-weight: 600;
     }
     .price {
-      font-size: 2rem;
+      font-size: 2.2rem;
       color: #2563eb;
       margin: 15px 0;
     }
     .price-card ul {
       list-style: none;
       padding: 0;
-      margin: 20px 0;
+      margin: 25px 0;
     }
     .price-card li {
       margin-bottom: 10px;
     }
     .price-card button {
-      padding: 10px 18px;
+      padding: 12px 20px;
       border: none;
       background: #2563eb;
       color: white;
-      border-radius: 6px;
+      border-radius: 8px;
       cursor: pointer;
+      font-weight: 500;
     }
     .price-card button:hover {
       background: #1d4ed8;
     }
-    .contact {
-      margin-top: 70px;
-      background: #2563eb;
+    .payment-buttons {
+      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .payment-buttons a {
+      display: inline-block;
+      padding: 10px 18px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+    .paypal {
+      background: #ffc439;
+      color: #111;
+    }
+    .stripe {
+      background: #635bff;
       color: white;
-      padding: 50px 20px;
+    }
+    .contact {
+      margin-top: 90px;
+      background: linear-gradient(135deg, #2563eb, #1e40af);
+      color: white;
+      padding: 60px 20px;
       text-align: center;
     }
     .contact h2 {
       margin-top: 0;
+      font-size: 2rem;
     }
     .contact p {
-      font-size: 1.1rem;
-      margin-bottom: 20px;
+      font-size: 1.15rem;
+      margin-bottom: 25px;
+      opacity: 0.9;
     }
     .contact button {
-      padding: 12px 22px;
+      padding: 14px 26px;
       border: none;
       background: white;
       color: #2563eb;
-      border-radius: 6px;
+      border-radius: 8px;
       font-size: 1rem;
       cursor: pointer;
+      font-weight: 500;
     }
     .contact button:hover {
       background: #e5e7eb;
     }
     footer {
-      background: #111827;
+      background: #0f172a;
       color: #9ca3af;
       text-align: center;
-      padding: 20px;
+      padding: 25px;
       font-size: 0.9rem;
+    }
+    /* WhatsApp Floating Button */
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 25px;
+      right: 25px;
+      background-color: #25d366;
+      color: #FFF;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
+    .whatsapp-float:hover {
+      background-color: #1ebe5d;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>PDF to Word Converter</h1>
-    <p>Fast. Accurate. Affordable document conversion.</p>
+    <div class="brand">
+      <div class="logo">DS</div>
+      <div>
+        <h1>DocSwift</h1>
+        <p>Fast. Accurate. Affordable document conversion.</p>
+      </div>
+    </div>
   </header>
 
   <section class="container hero">
@@ -185,12 +269,14 @@
 
     <div class="hero-box">
       <h3>Upload Your File</h3>
-      <form>
-        <input type="file" accept="application/pdf" required />
-        <button type="submit">Convert Now</button>
+      <form action="https://formsubmit.co/sraavanrao98@gmail.com" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" accept="application/pdf" required />
+        <input type="hidden" name="_subject" value="New PDF to Word Conversion Request" />
+        <input type="hidden" name="_template" value="table" />
+        <button type="submit">Submit for Conversion</button>
       </form>
-      <p style="font-size: 0.9rem; margin-top: 10px; color: #555;">
-        *File upload will be enabled after backend integration.
+      <p style="font-size: 0.9rem; margin-top: 12px; color: #555;">
+        Your file will be securely sent to us. You will receive your Word file by email.
       </p>
     </div>
   </section>
@@ -225,7 +311,10 @@
           <li>Standard formatting</li>
           <li>24-hour delivery</li>
         </ul>
-        <button>Get Started</button>
+        <div class="payment-buttons">
+          <a href="https://www.paypal.me/yourpaypal/5" class="paypal">Pay with PayPal</a>
+          <a href="https://buy.stripe.com/yourstripe5" class="stripe">Pay with Stripe</a>
+        </div>
       </div>
       <div class="price-card">
         <h3>Standard</h3>
@@ -235,7 +324,10 @@
           <li>Advanced formatting</li>
           <li>12-hour delivery</li>
         </ul>
-        <button>Get Started</button>
+        <div class="payment-buttons">
+          <a href="https://www.paypal.me/yourpaypal/15" class="paypal">Pay with PayPal</a>
+          <a href="https://buy.stripe.com/yourstripe15" class="stripe">Pay with Stripe</a>
+        </div>
       </div>
       <div class="price-card">
         <h3>Premium</h3>
@@ -245,7 +337,10 @@
           <li>Complex layouts & OCR</li>
           <li>6-hour delivery</li>
         </ul>
-        <button>Get Started</button>
+        <div class="payment-buttons">
+          <a href="https://www.paypal.me/yourpaypal/30" class="paypal">Pay with PayPal</a>
+          <a href="https://buy.stripe.com/yourstripe30" class="stripe">Pay with Stripe</a>
+        </div>
       </div>
     </div>
   </section>
@@ -257,7 +352,10 @@
   </section>
 
   <footer>
-    <p>© 2026 PDF to Word Converter. All rights reserved.</p>
+    <p>© 2026 DocSwift. All rights reserved.</p>
   </footer>
+
+  <!-- WhatsApp Chat Button -->
+  <a href="https://wa.me/0175675298" class="whatsapp-float" target="_blank">💬</a>
 </body>
 </html>
