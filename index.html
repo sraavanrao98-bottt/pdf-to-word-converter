@@ -3,9 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DocSwift — PDF to Word Converter</title>
-  <meta name="description" content="DocSwift converts PDF to Word quickly and accurately. Scanned PDFs, formatting preserved. Affordable and fast service." />
+  <title>DocSwift — PDF Conversion, Hosting & Domains</title>
+  <meta name="description" content="Convert PDFs to Word, get fast hosting and domain registration worldwide. Affordable, secure, and reliable services." />
+  <meta name="keywords" content="PDF to Word, hosting, domains, website hosting, file conversion, DocSwift" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Live Chat (Tawk.to) -->
+  <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/XXXXXXXXX/1abcdef';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script>
+
   <style>
     body {
       font-family: 'Poppins', Arial, sans-serif;
@@ -16,42 +42,25 @@
     header {
       background: linear-gradient(135deg, #2563eb, #1e40af);
       color: white;
-      padding: 40px 20px;
-      text-align: center;
+      padding: 20px;
     }
-    .brand {
+    nav {
+      max-width: 1100px;
+      margin: auto;
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      justify-content: center;
-      gap: 14px;
     }
-    .logo {
-      width: 52px;
-      height: 52px;
-      background: white;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      color: #2563eb;
-      font-size: 1.4rem;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.4rem;
-      font-weight: 600;
-    }
-    header p {
-      margin-top: 10px;
-      font-size: 1.15rem;
-      opacity: 0.9;
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 0.95rem;
     }
     .container {
       max-width: 1100px;
       margin: auto;
-      padding: 50px 20px;
+      padding: 60px 20px;
     }
     .hero {
       display: grid;
@@ -59,23 +68,11 @@
       gap: 40px;
       align-items: center;
     }
-    .hero-text h2 {
-      font-size: 2.1rem;
-      margin-bottom: 15px;
-    }
-    .hero-text p {
-      font-size: 1.1rem;
-      line-height: 1.7;
-    }
     .hero-box {
       background: white;
       padding: 35px;
       border-radius: 16px;
       box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    }
-    .hero-box h3 {
-      margin-top: 0;
-      font-weight: 600;
     }
     .hero-box input[type="file"] {
       width: 100%;
@@ -98,123 +95,56 @@
     .hero-box button:hover {
       background: #1d4ed8;
     }
-    .features {
-      margin-top: 70px;
+    .features, .pricing-cards, .testimonial-cards, .faq-cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 30px;
+      margin-top: 40px;
     }
-    .feature-card {
+    .feature-card, .price-card, .testimonial-card, .faq-card {
       background: white;
       padding: 30px;
       border-radius: 16px;
       box-shadow: 0 10px 25px rgba(0,0,0,0.06);
       text-align: center;
     }
-    .feature-card h4 {
-      margin-top: 12px;
-      font-weight: 600;
-    }
-    .pricing {
-      margin-top: 80px;
-      text-align: center;
-    }
-    .pricing h2 {
-      font-size: 2.2rem;
-      margin-bottom: 25px;
-    }
-    .pricing-cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-    }
-    .price-card {
-      background: white;
-      padding: 35px;
-      border-radius: 16px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-      position: relative;
-    }
-    .price-card h3 {
-      margin-top: 0;
-      font-weight: 600;
-    }
     .price {
-      font-size: 2.2rem;
+      font-size: 2rem;
       color: #2563eb;
       margin: 15px 0;
     }
     .price-card ul {
       list-style: none;
       padding: 0;
-      margin: 25px 0;
     }
     .price-card li {
       margin-bottom: 10px;
     }
-    .price-card button {
-      padding: 12px 20px;
-      border: none;
-      background: #2563eb;
-      color: white;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: 500;
-    }
-    .price-card button:hover {
-      background: #1d4ed8;
-    }
-    .payment-buttons {
-      margin-top: 15px;
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-    .payment-buttons a {
-      display: inline-block;
-      padding: 10px 18px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-size: 0.95rem;
-      font-weight: 500;
-    }
     .paypal {
       background: #ffc439;
       color: #111;
+      padding: 10px 18px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      display: inline-block;
+      margin: 5px;
     }
     .stripe {
       background: #635bff;
       color: white;
+      padding: 10px 18px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      display: inline-block;
+      margin: 5px;
     }
     .contact {
-      margin-top: 90px;
       background: linear-gradient(135deg, #2563eb, #1e40af);
       color: white;
       padding: 60px 20px;
       text-align: center;
-    }
-    .contact h2 {
-      margin-top: 0;
-      font-size: 2rem;
-    }
-    .contact p {
-      font-size: 1.15rem;
-      margin-bottom: 25px;
-      opacity: 0.9;
-    }
-    .contact button {
-      padding: 14px 26px;
-      border: none;
-      background: white;
-      color: #2563eb;
-      border-radius: 8px;
-      font-size: 1rem;
-      cursor: pointer;
-      font-weight: 500;
-    }
-    .contact button:hover {
-      background: #e5e7eb;
     }
     footer {
       background: #0f172a;
@@ -223,7 +153,6 @@
       padding: 25px;
       font-size: 0.9rem;
     }
-    /* WhatsApp Floating Button */
     .whatsapp-float {
       position: fixed;
       width: 60px;
@@ -245,117 +174,265 @@
     .whatsapp-float:hover {
       background-color: #1ebe5d;
     }
+
+    /* Discount Popup */
+    .discount-popup {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background: #22c55e;
+      color: white;
+      padding: 18px 22px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+      z-index: 2000;
+      animation: slideUp 1s ease;
+      max-width: 280px;
+    }
+    .discount-popup button {
+      background: white;
+      color: #16a34a;
+      border: none;
+      border-radius: 6px;
+      padding: 8px 14px;
+      font-weight: 600;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+    .discount-popup .close {
+      position: absolute;
+      top: 6px;
+      right: 10px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    @keyframes slideUp {
+      from { transform: translateY(100px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
   </style>
 </head>
 <body>
-  <header>
-    <div class="brand">
-      <div class="logo">DS</div>
-      <div>
-        <h1>DocSwift</h1>
-        <p>Fast. Accurate. Affordable document conversion.</p>
-      </div>
-    </div>
-  </header>
 
-  <section class="container hero">
-    <div class="hero-text">
-      <h2>Convert Your PDFs to Editable Word Documents</h2>
-      <p>
-        Upload your PDF and receive a perfectly formatted Word document.
-        We handle scanned files, images, tables, and complex layouts with high accuracy.
-      </p>
+<header>
+  <nav>
+    <strong style="font-size:1.2rem;">DocSwift</strong>
+    <div>
+      <a href="#hosting">Hosting</a>
+      <a href="#domains">Domains</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#testimonials">Reviews</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
     </div>
+  </nav>
+</header>
 
-    <div class="hero-box">
-      <h3>Upload Your File</h3>
-      <form action="https://formsubmit.co/sraavanrao98@gmail.com" method="POST" enctype="multipart/form-data">
-        <input type="file" name="file" accept="application/pdf" required />
-        <input type="hidden" name="_subject" value="New PDF to Word Conversion Request" />
-        <input type="hidden" name="_template" value="table" />
-        <button type="submit">Submit for Conversion</button>
-      </form>
-      <p style="font-size: 0.9rem; margin-top: 12px; color: #555;">
-        Your file will be securely sent to us. You will receive your Word file by email.
-      </p>
+<section class="container hero">
+  <div>
+    <h2>Convert PDFs to Editable Word Documents</h2>
+    <p>Upload your PDF and receive a perfectly formatted Word file. Fast, accurate, and affordable service worldwide.</p>
+    <div style="margin-top:20px;">
+      <a href="https://store244842.duoservers.com/hosting" class="stripe" style="margin-right:10px;">Get Hosting</a>
+      <a href="https://store244842.duoservers.com/domains" class="paypal">Register Domain</a>
     </div>
-  </section>
+  </div>
 
-  <section class="container features">
+  <div class="hero-box">
+    <h3>Upload Your File</h3>
+    <form action="https://formsubmit.co/sraavanrao98@gmail.com" method="POST" enctype="multipart/form-data">
+      <input type="file" name="file" accept="application/pdf" required />
+      <input type="hidden" name="_subject" value="New PDF to Word Conversion Request" />
+      <input type="hidden" name="_template" value="table" />
+      <input type="hidden" name="_autoresponse" value="Thank you for your order! We have received your file and will deliver your converted Word document shortly." />
+      <button type="submit">Submit for Conversion</button>
+    </form>
+    <p style="font-size: 0.9rem; margin-top: 12px; color: #555;">
+      Your file will be securely sent. You will receive your Word file by email.
+    </p>
+  </div>
+</section>
+
+<!-- Hosting Section -->
+<section id="hosting" class="container">
+  <h2 style="text-align:center;">Web Hosting Plans</h2>
+  <p style="text-align:center;max-width:700px;margin:auto;">Fast, secure, and affordable hosting for individuals, businesses, and online stores — worldwide.</p>
+
+  <div class="pricing-cards">
+    <div class="price-card">
+      <h3>Basic Hosting</h3>
+      <p class="price">$7/month</p>
+      <ul>
+        <li>1 Website</li>
+        <li>10 GB Storage</li>
+        <li>Free SSL</li>
+        <li>Email Support</li>
+      </ul>
+      <a href="https://store244842.duoservers.com/hosting/basic" class="stripe">Order Now</a>
+    </div>
+    <div class="price-card">
+      <h3>Standard Hosting</h3>
+      <p class="price">$12/month</p>
+      <ul>
+        <li>5 Websites</li>
+        <li>50 GB Storage</li>
+        <li>Free SSL</li>
+        <li>Priority Support</li>
+      </ul>
+      <a href="https://store244842.duoservers.com/hosting/standard" class="stripe">Order Now</a>
+    </div>
+    <div class="price-card">
+      <h3>Premium Hosting</h3>
+      <p class="price">$22/month</p>
+      <ul>
+        <li>Unlimited Websites</li>
+        <li>Unlimited Storage</li>
+        <li>Free SSL</li>
+        <li>Premium Support</li>
+      </ul>
+      <a href="https://store244842.duoservers.com/hosting/premium" class="stripe">Order Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- Domain Section -->
+<section id="domains" class="container">
+  <h2 style="text-align:center;">Register Your Domain</h2>
+  <p style="text-align:center;max-width:700px;margin:auto;">Secure your brand name today with instant registration and worldwide availability.</p>
+
+  <div class="features">
     <div class="feature-card">
-      <h4>✔ High Accuracy</h4>
-      <p>Formatting, tables, and fonts preserved exactly.</p>
+      <h4>.com</h4>
+      <p>$15/year</p>
+      <a href="https://store244842.duoservers.com/domains" class="paypal">Register</a>
     </div>
     <div class="feature-card">
-      <h4>✔ Scanned PDFs</h4>
-      <p>We use OCR to convert scanned and image-based PDFs.</p>
+      <h4>.net</h4>
+      <p>$18/year</p>
+      <a href="https://store244842.duoservers.com/domains" class="paypal">Register</a>
     </div>
     <div class="feature-card">
-      <h4>✔ Fast Delivery</h4>
-      <p>Most files delivered within 1–3 hours.</p>
+      <h4>.org</h4>
+      <p>$17/year</p>
+      <a href="https://store244842.duoservers.com/domains" class="paypal">Register</a>
     </div>
     <div class="feature-card">
-      <h4>✔ Affordable Pricing</h4>
-      <p>Pay per page or choose monthly plans.</p>
+      <h4>.tech / .online</h4>
+      <p>$12/year</p>
+      <a href="https://store244842.duoservers.com/domains" class="paypal">Register</a>
     </div>
-  </section>
+  </div>
 
-  <section class="container pricing">
-    <h2>Pricing Plans</h2>
-    <div class="pricing-cards">
-      <div class="price-card">
-        <h3>Basic</h3>
-        <p class="price">$5</p>
-        <ul>
-          <li>Up to 5 pages</li>
-          <li>Standard formatting</li>
-          <li>24-hour delivery</li>
-        </ul>
-        <div class="payment-buttons">
-          <a href="https://www.paypal.me/yourpaypal/5" class="paypal">Pay with PayPal</a>
-          <a href="https://buy.stripe.com/yourstripe5" class="stripe">Pay with Stripe</a>
-        </div>
-      </div>
-      <div class="price-card">
-        <h3>Standard</h3>
-        <p class="price">$15</p>
-        <ul>
-          <li>Up to 20 pages</li>
-          <li>Advanced formatting</li>
-          <li>12-hour delivery</li>
-        </ul>
-        <div class="payment-buttons">
-          <a href="https://www.paypal.me/yourpaypal/15" class="paypal">Pay with PayPal</a>
-          <a href="https://buy.stripe.com/yourstripe15" class="stripe">Pay with Stripe</a>
-        </div>
-      </div>
-      <div class="price-card">
-        <h3>Premium</h3>
-        <p class="price">$30</p>
-        <ul>
-          <li>Up to 50 pages</li>
-          <li>Complex layouts & OCR</li>
-          <li>6-hour delivery</li>
-        </ul>
-        <div class="payment-buttons">
-          <a href="https://www.paypal.me/yourpaypal/30" class="paypal">Pay with PayPal</a>
-          <a href="https://buy.stripe.com/yourstripe30" class="stripe">Pay with Stripe</a>
-        </div>
-      </div>
+  <div style="text-align:center;margin-top:30px;">
+    <a href="https://store244842.duoservers.com/domains" class="stripe">Search Your Domain Now</a>
+  </div>
+</section>
+
+<!-- Pricing Section -->
+<section id="pricing" class="container">
+  <h2 style="text-align:center;">PDF to Word Conversion Pricing</h2>
+  <div class="pricing-cards">
+    <div class="price-card">
+      <h3>Basic</h3>
+      <p class="price">$5</p>
+      <ul>
+        <li>Up to 5 pages</li>
+        <li>Standard formatting</li>
+        <li>24-hour delivery</li>
+      </ul>
+      <a href="https://www.paypal.me/sraavanrao98/5" class="paypal">Pay with PayPal</a>
+      <a href="https://buy.stripe.com/yourstripe5" class="stripe">Pay with Stripe</a>
     </div>
-  </section>
+    <div class="price-card">
+      <h3>Standard</h3>
+      <p class="price">$15</p>
+      <ul>
+        <li>Up to 20 pages</li>
+        <li>Advanced formatting</li>
+        <li>12-hour delivery</li>
+      </ul>
+      <a href="https://www.paypal.me/sraavanrao98/15" class="paypal">Pay with PayPal</a>
+      <a href="https://buy.stripe.com/yourstripe15" class="stripe">Pay with Stripe</a>
+    </div>
+    <div class="price-card">
+      <h3>Premium</h3>
+      <p class="price">$30</p>
+      <ul>
+        <li>Up to 50 pages</li>
+        <li>Complex layouts & OCR</li>
+        <li>6-hour delivery</li>
+      </ul>
+      <a href="https://www.paypal.me/sraavanrao98/30" class="paypal">Pay with PayPal</a>
+      <a href="https://buy.stripe.com/yourstripe30" class="stripe">Pay with Stripe</a>
+    </div>
+  </div>
+</section>
 
-  <section class="contact">
-    <h2>Need Custom or Bulk Conversion?</h2>
-    <p>Contact us for business, legal, academic, or large-volume projects.</p>
-    <button onclick="window.location.href='mailto:sraavanrao98@gmail.com'">Contact Us</button>
-  </section>
+<!-- Testimonials -->
+<section id="testimonials" class="container">
+  <h2 style="text-align:center;">What Our Customers Say</h2>
+  <div class="testimonial-cards">
+    <div class="testimonial-card">
+      <p>⭐️⭐️⭐️⭐️⭐️</p>
+      <p>“Fast delivery and perfect formatting. Highly recommended!”</p>
+      <strong>— James, USA</strong>
+    </div>
+    <div class="testimonial-card">
+      <p>⭐️⭐️⭐️⭐️⭐️</p>
+      <p>“Great hosting service and excellent support.”</p>
+      <strong>— Aisha, UAE</strong>
+    </div>
+    <div class="testimonial-card">
+      <p>⭐️⭐️⭐️⭐️⭐️</p>
+      <p>“Affordable and reliable. My website was live the same day.”</p>
+      <strong>— Daniel, UK</strong>
+    </div>
+  </div>
+</section>
 
-  <footer>
-    <p>© 2026 DocSwift. All rights reserved.</p>
-  </footer>
+<!-- FAQ -->
+<section id="faq" class="container">
+  <h2 style="text-align:center;">Frequently Asked Questions</h2>
+  <div class="faq-cards">
+    <div class="faq-card">
+      <h4>How fast will I receive my converted file?</h4>
+      <p>Most files are delivered within 1–3 hours. Large files may take up to 24 hours.</p>
+    </div>
+    <div class="faq-card">
+      <h4>Do you support scanned PDFs?</h4>
+      <p>Yes! We use OCR to convert scanned and image-based documents.</p>
+    </div>
+    <div class="faq-card">
+      <h4>Is hosting available worldwide?</h4>
+      <p>Yes, our hosting and domains are available globally with fast servers.</p>
+    </div>
+    <div class="faq-card">
+      <h4>What payment methods do you accept?</h4>
+      <p>We accept PayPal and Stripe (credit/debit cards).</p>
+    </div>
+  </div>
+</section>
 
-  <!-- WhatsApp Chat Button -->
-  <a href="https://wa.me/0175675298" class="whatsapp-float" target="_blank">💬</a>
+<section id="contact" class="contact">
+  <h2>Need Help or Bulk Orders?</h2>
+  <p>Email or WhatsApp us for custom projects and business solutions.</p>
+  <button onclick="window.location.href='mailto:sraavanrao98@gmail.com'">Contact Us</button>
+</section>
+
+<footer>
+  <p>© 2026 DocSwift Hosting & Domains. All rights reserved.</p>
+</footer>
+
+<a href="https://wa.me/0175675298" class="whatsapp-float" target="_blank">💬</a>
+
+<!-- Discount Popup -->
+<div class="discount-popup" id="discountPopup">
+  <span class="close" onclick="document.getElementById('discountPopup').style.display='none'">×</span>
+  🎉 <strong>Limited Offer!</strong><br>
+  Get <strong>10% OFF</strong> your first order today!
+  <br>
+  <button onclick="document.getElementById('discountPopup').style.display='none'">Claim Offer</button>
+</div>
+
 </body>
 </html>
